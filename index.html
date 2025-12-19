@@ -1,36 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <!-- Favicon -->
+  <link rel="icon" href="logo.jpeg" />
+
+  <!-- Meta -->
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Title & SEO -->
   <title>SolonixLabs | Practical AI Systems</title>
-  <meta name="description" content="SolonixLabs builds practical, production-ready AI systems for organizations that need real-world impact." />
+  <meta
+    name="description"
+    content="SolonixLabs builds practical, production-ready AI systems for organizations that need real-world impact."
+  />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
   <!-- ================= HEADER ================= -->
-<header class="site-header">
-  <div class="container">
+  <header class="site-header">
+    <div class="container">
 
-    <!-- Brand -->
-    <div class="brand">
-      <a href="index.html" class="brand-link">
-        <img src="logo.jpeg" alt="SolonixLabs logo" class="logo" />
-        <span class="brand-name">SolonixLabs</span>
-      </a>
+      <!-- Brand -->
+      <div class="brand">
+        <a href="index.html" class="brand-link">
+          <img src="logo.jpeg" alt="SolonixLabs logo" class="logo" />
+          <span class="brand-name">SolonixLabs</span>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="navigation">
+        <a href="index.html">Home</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#approach">Approach</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="menu-toggle" aria-label="Toggle menu">
+        ☰
+      </button>
+
     </div>
 
-    <nav class="navigation">
+    <!-- Mobile Navigation -->
+    <div class="mobile-menu">
       <a href="index.html">Home</a>
       <a href="#solutions">Solutions</a>
       <a href="#approach">Approach</a>
       <a href="careers.html">Careers</a>
       <a href="contact.html">Contact</a>
-    </nav>
-
-  </div>
-</header>
+    </div>
+  </header>
 
   <!-- ================= HERO ================= -->
   <section class="hero">
@@ -219,6 +246,16 @@
       <p>© 2025 SolonixLabs. Practical AI. Built with purpose.</p>
     </div>
   </footer>
+
+  <!-- ================= MOBILE MENU SCRIPT ================= -->
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    toggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>
