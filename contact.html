@@ -33,16 +33,32 @@
       </a>
     </div>
 
+    <!-- Desktop Navigation -->
     <nav class="navigation">
       <a href="index.html">Home</a>
       <a href="index.html#solutions">Solutions</a>
       <a href="index.html#approach">Approach</a>
       <a href="careers.html">Careers</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html">Contact Us</a>
     </nav>
 
+    <!-- ✅ Mobile Menu Toggle (INSIDE header container) -->
+    <button class="menu-toggle" aria-label="Toggle menu">
+      ☰
+    </button>
+
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="index.html#solutions">Solutions</a>
+    <a href="index.html#approach">Approach</a>
+    <a href="careers.html">Careers</a>
+    <a href="contact.html">Contact Us</a>
   </div>
 </header>
+
 
 
   <!-- ================= HERO ================= -->
@@ -113,6 +129,16 @@
       <p>© 2025 SolonixLabs. Practical AI. Built with purpose.</p>
     </div>
   </footer>
+
+    <!-- ================= MOBILE MENU SCRIPT ================= -->
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    toggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>

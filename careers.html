@@ -22,18 +22,43 @@
 <body>
 
   <!-- ================= HEADER ================= -->
-  <header class="site-header">
-    <div class="container">
-      <div class="brand">SolonixLabs</div>
-      <nav class="navigation">
-        <a href="index.html">Home</a>
+ <header class="site-header">
+  <div class="container">
+
+    <!-- Brand -->
+    <div class="brand">
+      <a href="index.html" class="brand-link">
+        <img src="logo.jpeg" alt="SolonixLabs logo" class="logo" />
+        <span class="brand-name">SolonixLabs</span>
+      </a>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="navigation">
+      <a href="index.html">Home</a>
       <a href="index.html#solutions">Solutions</a>
       <a href="index.html#approach">Approach</a>
-        <a href="careers.html">Careers</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <!-- ✅ Mobile Menu Toggle (INSIDE header container) -->
+    <button class="menu-toggle" aria-label="Toggle menu">
+      ☰
+    </button>
+
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="index.html#solutions">Solutions</a>
+    <a href="index.html#approach">Approach</a>
+    <a href="careers.html">Careers</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+</header>
+
 
   <!-- ================= HERO ================= -->
   <section class="hero">
@@ -173,6 +198,15 @@
       <p>© 2025 SolonixLabs. Practical AI. Built with purpose.</p>
     </div>
   </footer>
+    <!-- ================= MOBILE MENU SCRIPT ================= -->
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    toggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>
